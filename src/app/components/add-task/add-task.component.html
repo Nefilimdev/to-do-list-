@@ -8,9 +8,12 @@
       name="tasks"
       class="input-tasks"
       placeholder="{{placeholder}}"
+      [(ngModel)]="todoInput"
+      (click)="resetPlaceholder()"
       (keyup.enter)="sendTodoData($event.target.value)"
-      (change)="changeTodo($event)">
-
+      >
+      <!-- (change)="changeTodo($event)" -->
     <mat-icon matSuffix (click)="sendTodoDataClick()">add</mat-icon>
+
   </mat-form-field>
 </div>
